@@ -52,9 +52,32 @@ function sumNumbers(arreglo) {
 }
 
 
-
+const mixedArr = [6, 12, 'miami',1, true, 'barca', '200', 'lisboa', 8, 10];
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum(matrix) {
+  let res = 0
+  
+  for(i =0;i<matrix.length;i++){
+    if (typeof matrix[i] != "object"){
+      //condicion ternaria
+       typeof matrix[i]  == "string" ? res += matrix[i].length : res += matrix[i]
+    }
+    else{
+      throw new Error("Unsupported data type sir or ma'am")
+    }
+  }
+
+/*let sumArray= 0
+for(i =0;i<matrix.length;i++){
+  typeof matrix[i] == "object" ? falla() : typeof matrix[i]  == "string"? sumArray += matrix[i].length: sumArray += matrix[i]
+}
+*/
+return res
+}
+
+/*function falla(){
+  throw new Error("Unsupported data type sir or ma'am")
+}*/
 
 
 
