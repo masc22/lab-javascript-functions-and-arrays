@@ -37,9 +37,17 @@ const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 function sumNumbers(arreglo) {
  let res = 0
- for(i =0;i<arreglo.length;i++){
-  res += arreglo[i]
- }
+ if(arreglo.length == 0){
+   res = 0
+ }else{
+  if(!arreglo){
+    res = 0
+    }else{
+      for(i =0;i<arreglo.length;i++){
+        res += arreglo[i]
+      }
+  }
+}
  return res
 }
 
